@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 0) do
     t.column :changes, :text
     t.column :version, :integer, :default => 0
     t.column :created_at, :datetime
+    t.column :some_attribute, :string
   end
   
   add_index :audits, [:auditable_id, :auditable_type], :name => 'auditable_index'
